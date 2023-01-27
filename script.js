@@ -10,6 +10,8 @@ function button(){
     }
 }
 
+
+
 function buttonStart(){
     clicks = 0
     btn.removeAttribute("disabled",)
