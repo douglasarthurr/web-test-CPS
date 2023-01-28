@@ -17,11 +17,17 @@
         </h1>
 
         <h2 class="subTitulo">
-            Você tem 15 segundos
+            Escolha quantos segundos de teste <select id="secondsTest">second
+                
+                <option value="10000">10</option>
+                <option value="15000">15</option>
+                <option value="30000">30</option>
+            </select>
         </h2>
-
-        <button class="iniciar" id="start"  onclick="buttonStart()"> Começar </button>
-        <button class="botao" id="click"  onclick="button()" disabled="disabled"> Click-me </button>
+        
+        <button class="iniciar" id="start"  onclick="enableButton()"> Começar </button>
+        <button class="botao" id="click"  onclick="countClick()" disabled="disabled"> Click-me </button>
+        <p id="clicks"></p>
     </section>
 
     <footer class="rodape">

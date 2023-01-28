@@ -71,3 +71,13 @@ body{
     border-radius: 40px;
     font-size: 30px;
 }
+
+#clicks{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#secondsTest{
+    width: 40px;
+    height: 20px;
+}

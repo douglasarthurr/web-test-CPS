@@ -1,39 +1,28 @@
-const btn = document.querySelector("#click")
-let clicks = null
-function button(){
-    clicks++
-    btn.setAttribute("class", "botaoClick")
-    setInterval(trocarClass, 800)
-    if(clicks >= 1){
-        setInterval(desativarBotao, 5000)
-        console.log(clicks)
-    }
+const clickButton = document.querySelector("#click");
+let clicks = null;
+
+var select = document.getElementById("secondsTest");
+var selectedValue = select.value;
+select.addEventListener("change", function(){
+    selectedValue = select.value;
+});
+
+function countClick(){
+    clicks++;
+    document.getElementById("clicks").innerHTML = ("clicks = "+clicks);
 }
 
-
-
-function buttonStart(){
-    clicks = 0
-    btn.removeAttribute("disabled",)
-    console.log(clicks)
-
+function enableButton(){
+    clickButton.removeAttribute("disabled");
 }
 
-function trocarClass(){
-    btn.setAttribute("class", "botao")
+function disableButton(){
+    clickButton.disabled = true;
+    total = clicks/15;
+    document.getElementById("clicks").innerHTML = ("CPS = "+total.toFixed(2));
 }
 
-function desativarBotao(){
-    if(clicks >= 1){
-        btn.setAttribute("disabled", "disabled")
-        clicks = 0
-    }
-}
-
-function informarClick(){
-    if(clicks === 0) {
-        console.log("test")
-    }
-}
-
-
+clickButton.addEventListener("click", function(){
+    
+    setTimeout(disableButton, selectedValue);
+  });
